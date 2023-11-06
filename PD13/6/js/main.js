@@ -10,7 +10,7 @@ if (number[0] > number[1]) {
   text = `Pirmas skaitmuo didesnis už antrą: ${number[0]}`;
 }
 else {
-  text = `antras skaitmuo didesnis už antrą: ${number[1]}`;
+  text = `antras skaitmuo didesnis už pirma: ${number[1]}`;
 }
 
 console.log(text);
