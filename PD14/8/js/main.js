@@ -1,5 +1,5 @@
-const rows = 11;
-const columns = 11;
+const rows = 10;
+const columns = 10;
 
 let table = '';
 
