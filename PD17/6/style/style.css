@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 260px;
+    height: min-content;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.05) 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style-type: none;
+}
+
+p {
+    font-size: x-small;
+    color: gray;
+    margin-top: -12px;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.btnAlign {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 94%;
+    height: 24px;
+    padding: 4px;
+    background-color: transparent;
+    color: white;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid white;
+    transition: 0.3s all;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(3deg);
+    }
+    40% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: rotate(3deg);
+    }
+    80% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
