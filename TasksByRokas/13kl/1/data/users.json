@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "name": "Petras",
+    "age": 50,
+    "password": "TestAtnaujintasPatch50",
+    "program": "Mathematics"
+  },
+  {
+    "id": 3,
+    "name": "NewTest",
+    "age": 80,
+    "password": "TestAtnaujintasObject",
+    "program": "Physics"
+  },
+  {
+    "id": 3,
+    "name": "Jurgis",
+    "password": "TestAtnaujintasObject",
+    "program": "Chemistry"
+  }
+]
