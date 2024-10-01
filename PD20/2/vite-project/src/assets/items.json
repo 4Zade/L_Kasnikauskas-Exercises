@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Nešiojamas kompiuteris Lenovo IdeaPad 1 15IGL05, Intel® Celeron® Processor N4120, 4 GB, 128 GB, 15.6 \", Intel UHD Graphics 600, pilka",
+        "brand": "Lenovo",
+        "images": ["1", "2", "3", "4", "5", "6", "7", "8"],
+        "price": 489.99,
+        "sticker": true,
+        "internetOnly": false
+    },
+    {
+        "title": "Nešiojamas kompiuteris Apple MacBook Air, Apple M3, 8 GB, 256 GB, 13.6 \", M3 8-core, pilka",
+        "brand": "Apple",
+        "images": ["1", "2", "3", "4", "5"],
+        "price": 1329.99,
+        "sticker": false,
+        "internetOnly": false
+    },
+    {
+        "title": "Nešiojamas kompiuteris Asus ZenBook Pro 14 Duo OLED UX8402VV-P1021X, Intel® Core™ i9-13900H Processor, 32 GB, 2 TB, 14.5 \", Nvidia GeForce RTX 4060, juoda",
+        "brand": "Asus",
+        "images": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "price": 3079.99,
+        "sticker": false,
+        "internetOnly": true
+    }
+]
