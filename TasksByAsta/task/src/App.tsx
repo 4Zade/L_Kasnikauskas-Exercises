@@ -70,7 +70,7 @@ function App() {
   const [discount, setDiscount] = useState(0);
 
   const calculateSubtotal = () => {
-    setSubtotal(info.map((item) => item.price * item.count).reduce((a, b) => a + b, 0))
+    setSubtotal(info.map((item: InfoProps) => item.price * item.count).reduce((a: number, b: number) => a + b, 0))
   }
 
   const calculateTotal = () => {
@@ -93,7 +93,7 @@ function App() {
                 flavor={item.flavor}
                 color={item.color}
                 textColor={item.fontColor}
-                click={() => setInfo(info.map((i) => i.key === item.key ? { ...i, count: i.count + 1 } : i))}
+                click={() => setInfo(info.map((i: InfoProps) => i.key === item.key ? { ...i, count: i.count + 1 } : i))}
               />
             ))
           }
