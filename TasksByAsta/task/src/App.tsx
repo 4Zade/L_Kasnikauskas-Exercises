@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonComponent from "./contexts/ButtonComponent";
+import ContentCount from "./contexts/ContentCount";
+import SumComponent from "./contexts/SumComponent";
 
-const info = [
+export interface InfoProps {
+  flavor: string;
+  key: string;
+  price: number;
+  color: string;
+  fontColor: string;
+  count: number;
+}
+
+const infoArray: InfoProps[] = [
   {
     flavor: "Chocolate",
     key: "chocolate",
@@ -15,7 +26,8 @@ const info = [
     key: "vanilla",
     price: 4,
     color: "#f0f0f0",
-    fontColor: "#000000"
+    fontColor: "#000000",
+    count: 0
   },
   {
     flavor: "Strawberry",
@@ -52,22 +64,43 @@ const info = [
 ]
 
 function App() {
-  const [count, setCount] = useState(info);
+  const [info, setInfo] = useState<InfoProps[]>(infoArray)
+  const [subtotal, setSubtotal] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [discount, setDiscount] = useState(0);
+
+  const calculateSubtotal = () => {
+    setSubtotal(info.map((item) => item.price * item.count).reduce((a, b) => a + b, 0))
+  }
+
+  const calculateTotal = () => {
+    setTotal(subtotal - (subtotal * (discount / 100)));
+  }
+
+  useEffect(() => {
+    calculateSubtotal();
+    calculateTotal();
+  }, [info, subtotal, discount])
 
   return (
-      <main className="w-screen h-screen flex flex-col justify-center items-center gap-4">
+      <main className="w-screen h-screen flex flex-col justify-center items-center gap-4 bg-slate-700">
+        <input type="number" min={0} max={100} onChange={(e) => setDiscount(Number(e.target.value))} placeholder="Discount" className="border-2 rounded-xl border-slate-950 px-2 py-1"/>
         <section className="w-1/3 h-1/3 grid grid-rows-3 grid-cols-3 p-1 bg-slate-950">
           {
-            info.map((item) => (
+            infoArray.map((item) => (
               <ButtonComponent
                 key={item.key}
                 flavor={item.flavor}
                 color={item.color}
                 textColor={item.fontColor}
+                click={() => setInfo(info.map((i) => i.key === item.key ? { ...i, count: i.count + 1 } : i))}
               />
             ))
           }
           
+          <ContentCount info={info}/>
+
+          <SumComponent total={total} subtotal={subtotal} discount={discount}/>
         </section>
       </main>
   )
