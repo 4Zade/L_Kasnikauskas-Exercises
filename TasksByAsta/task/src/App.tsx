@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ButtonComponent from "./contexts/ButtonComponent";
-import ContentCount from "./contexts/ContentCount";
-import SumComponent from "./contexts/SumComponent";
+import ButtonComponent from "./components/ButtonComponent";
+import ContentCount from "./components/ContentCount";
+import SumComponent from "./components/SumComponent";
 
 export interface InfoProps {
   flavor: string;
